@@ -21,7 +21,7 @@ import java.io.IOException;
 
 /**
  * The FizzBuzz class of the FizzBuzz application
- *
+ * <p>
  * Created by Caleb on 10/13/2016.
  */
 public class FizzBuzz {
@@ -71,7 +71,7 @@ public class FizzBuzz {
 
         String result = "";
         for (int i = 1; i < this.iterations; i++) {
-            result = result + FizzBuzzCheck(i) + " ";
+            result += FizzBuzzCheck(i) + " ";
         }
         return result;
 
@@ -85,11 +85,11 @@ public class FizzBuzz {
      * @return The result string.
      */
     @Contract(pure = true)
-    private String FizzBuzzCheck(int input) {
+    private static String FizzBuzzCheck(int input) {
 
-        if (input % 15 == 0) return fizzBuzz; // Return FizzBuzz
-        if (input % 5 == 0) return buzz; // Return Buzz
-        if (input % 3 == 0) return fizz; // Return Fizz
+        if ((input % 15) == 0) return fizzBuzz; // Return FizzBuzz
+        if ((input % 5) == 0) return buzz; // Return Buzz
+        if ((input % 3) == 0) return fizz; // Return Fizz
         else return Integer.toString(input); // Return the original input
 
     }

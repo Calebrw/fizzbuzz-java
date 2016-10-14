@@ -19,16 +19,17 @@ import java.io.IOException;
 
 /**
  * The Main class of the FizzBuzz application
- *
+ * <p>
  * Created by Caleb on 10/13/2016.
  */
 public class Main {
 
-    public static void main(String [] args) {
+    public static void main(String[] args) {
 
         try {
             FizzBuzz fizzBuzz = new FizzBuzz(100);
-            System.out.println(fizzBuzz.generate());
+            String result = fizzBuzz.generate();
+            System.out.println(result);
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
