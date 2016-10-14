@@ -73,7 +73,7 @@ public class FizzBuzz {
         for (int i = 1; i < this.iterations; i++) {
             result += FizzBuzzCheck(i) + " ";
         }
-        return result;
+        return result.trim();
 
     }
 
