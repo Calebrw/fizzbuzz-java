@@ -57,7 +57,7 @@ public class FizzBuzz {
         if (iterations <= 0) {
             throw new IOException("The input iterations value is invalid as it too small.");
         } else {
-            this.iterations = iterations;
+            this.iterations = iterations + 1;
         }
 
     }
@@ -67,7 +67,7 @@ public class FizzBuzz {
      *
      * @return The FizzBuzz String
      */
-    String generate() {
+    public String generate() {
 
         String result = "";
         for (int i = 1; i < this.iterations; i++) {
