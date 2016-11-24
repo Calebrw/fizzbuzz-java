@@ -28,7 +28,7 @@ public class Main {
 
         try {
             FizzBuzz fizzBuzz = new FizzBuzz(100);
-            String result = fizzBuzz.generate();
+            StringBuilder result = fizzBuzz.generate();
             System.out.println(result);
         } catch (IOException ioe) {
             ioe.printStackTrace();

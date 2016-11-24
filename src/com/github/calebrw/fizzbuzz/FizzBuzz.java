@@ -49,15 +49,15 @@ public class FizzBuzz {
     /**
      * The FizzBuzz constructor. Set the iterations of process.
      *
-     * @param iterations The number of iterations to process.
+     * @param i The number of iterations to process.
      * @throws IOException If the number is 0 or less.
      */
-    public FizzBuzz(final int iterations) throws IOException {
+    public FizzBuzz(final int i) throws IOException {
 
-        if (iterations <= 0) {
+        if (i <= 0) {
             throw new IOException("The input iterations value is invalid as it too small.");
         } else {
-            this.iterations = iterations + 1;
+            this.iterations = i + 1;
         }
 
     }
@@ -67,13 +67,18 @@ public class FizzBuzz {
      *
      * @return The FizzBuzz String
      */
-    public String generate() {
+    public StringBuilder generate() {
 
-        String result = "";
-        for (int i = 1; i < this.iterations; i++) {
-            result += FizzBuzzCheck(i) + " ";
+        StringBuilder result = new StringBuilder(0);
+        int i = 1;
+        while (i < this.iterations) {
+            result.append(FizzBuzzCheck(i));
+            if ((this.iterations - 1) != i) {
+                result.append(" ");
+            }
+            i++;
         }
-        return result.trim();
+        return result;
 
     }
 
