@@ -16,6 +16,7 @@
 package com.github.calebrw.fizzbuzz;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * The Main class of the FizzBuzz application
@@ -27,7 +28,12 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            final FizzBuzz fizzBuzz = new FizzBuzz(100);
+
+            final Scanner scanner = new Scanner(System.in);
+            System.out.println("How many numbers would you like to check? ");
+            final int i = scanner.nextInt();
+
+            final FizzBuzz fizzBuzz = new FizzBuzz(i);
             final StringBuilder result = fizzBuzz.generate();
             System.out.println(result);
         } catch (final IOException ioe) {
