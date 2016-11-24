@@ -27,10 +27,10 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            FizzBuzz fizzBuzz = new FizzBuzz(100);
-            StringBuilder result = fizzBuzz.generate();
+            final FizzBuzz fizzBuzz = new FizzBuzz(100);
+            final StringBuilder result = fizzBuzz.generate();
             System.out.println(result);
-        } catch (IOException ioe) {
+        } catch (final IOException ioe) {
             ioe.printStackTrace();
         }
 
