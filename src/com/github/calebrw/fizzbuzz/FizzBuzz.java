@@ -44,7 +44,7 @@ public class FizzBuzz {
     /**
      * The number of iterations to process. Set via constructor.
      */
-    private int iterations;
+    private final int iterations;
 
     /**
      * The FizzBuzz constructor. Set the iterations of process.
@@ -67,14 +67,14 @@ public class FizzBuzz {
      *
      * @return The FizzBuzz String
      */
-    public StringBuilder generate() {
+    public final StringBuilder generate() {
 
-        StringBuilder result = new StringBuilder(0);
+        final StringBuilder result = new StringBuilder(0);
         int i = 1;
         while (i < this.iterations) {
-            result.append(FizzBuzzCheck(i));
+            result.append(fizzBuzzCheck(i));
             if ((this.iterations - 1) != i) {
-                result.append(" ");
+                result.append(' ');
             }
             i++;
         }
@@ -90,7 +90,7 @@ public class FizzBuzz {
      * @return The result string.
      */
     @Contract(pure = true)
-    private static String FizzBuzzCheck(int input) {
+    private static String fizzBuzzCheck(final int input) {
 
         if ((input % 15) == 0) return FIZZ_BUZZ; // Return FizzBuzz
         if ((input % 5) == 0) return BUZZ; // Return Buzz

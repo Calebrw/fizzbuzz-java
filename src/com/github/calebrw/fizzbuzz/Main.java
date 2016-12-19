@@ -25,21 +25,20 @@ import java.util.*;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        try {
-            final Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.print("How many numbers would you like to check? ");
             final int i = scanner.nextInt();
 
             final FizzBuzz fizzBuzz = new FizzBuzz(i);
             final StringBuilder result = fizzBuzz.generate();
             System.out.println(result);
-        } catch (final InputMismatchException imo) {
+            scanner.close();
+        } catch (final InputMismatchException ignored) {
             // This catches all instances of the input not being an integer
             System.out.println("Invalid input. Please restart this application.");
-        }
-        catch (final IOException ioe) {
+        } catch (final IOException ioe) {
             // This catches if the Scanner object has closed.
             ioe.printStackTrace();
         }
