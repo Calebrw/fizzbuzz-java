@@ -29,17 +29,17 @@ public class FizzBuzz {
     /**
      * The Fizz String
      */
-    private static final String fizz = "Fizz";
+    private static final String FIZZ = "Fizz";
 
     /**
      * The Buzz String
      */
-    private static final String buzz = "Buzz";
+    private static final String BUZZ = "Buzz";
 
     /**
      * The FizzBuzz String
      */
-    private static final String fizzBuzz = fizz + buzz;
+    private static final String FIZZ_BUZZ = FIZZ + BUZZ;
 
     /**
      * The number of iterations to process. Set via constructor.
@@ -92,9 +92,9 @@ public class FizzBuzz {
     @Contract(pure = true)
     private static String FizzBuzzCheck(int input) {
 
-        if ((input % 15) == 0) return fizzBuzz; // Return FizzBuzz
-        if ((input % 5) == 0) return buzz; // Return Buzz
-        if ((input % 3) == 0) return fizz; // Return Fizz
+        if ((input % 15) == 0) return FIZZ_BUZZ; // Return FizzBuzz
+        if ((input % 5) == 0) return BUZZ; // Return Buzz
+        if ((input % 3) == 0) return FIZZ; // Return Fizz
         else return Integer.toString(input); // Return the original input
 
     }
